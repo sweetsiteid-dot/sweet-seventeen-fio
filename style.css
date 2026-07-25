@@ -1145,30 +1145,36 @@ footer p{
 
 }
 
-/* ===== Dresscode Title ===== */
+/* ===== Dresscode Text ===== */
 
-#dresscode{
+.dresscode-section{
 
     text-align:center;
 
 }
 
-#dresscode span,
-#dresscode h2,
-#dresscode p{
+.dresscode-section span{
+
+    display:block;
 
     text-align:center;
 
-    margin-left:auto;
+}
 
-    margin-right:auto;
+.dresscode-section h2{
+
+    text-align:center;
 
 }
 
-#dresscode p{
+.dresscode-section p{
 
     max-width:650px;
 
     margin:20px auto 40px;
+
+    text-align:center;
+
+    line-height:1.8;
 
 }
