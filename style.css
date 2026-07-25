@@ -1112,13 +1112,13 @@ footer p{
 
     bottom:-50px;
 
-    color:rgba(255,255,255,.08);
+    color:rgba(255,255,255,.12);
 
     pointer-events:none;
 
     user-select:none;
 
-    z-index:0;
+    z-index:1;
 
     animation:floatHeart linear forwards;
 
