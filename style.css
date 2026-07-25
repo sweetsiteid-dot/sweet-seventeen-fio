@@ -417,7 +417,7 @@ section{
 
 .location-section{
 
-    background:#56142a;
+    background:#4B1023
 
 }
 
@@ -816,12 +816,7 @@ section{
 
     text-align:center;
 
-    background:linear-gradient(
-    180deg,
-    #7d1d39,
-    #63162d,
-    #49101f
-    );
+    background:#4b1023;
 
 }
 
