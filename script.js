@@ -425,3 +425,35 @@ document.addEventListener("visibilitychange", () => {
 ========================================= */
 
 console.log("Sweet Seventeen Invitation by Danial 🤍");
+
+/* =========================================
+   FLOATING HEART BACKGROUND
+========================================= */
+
+function createFloatingHeart(){
+
+    const heart=document.createElement("span");
+
+    heart.className="bg-heart";
+
+    const icons=["♡","♥"];
+
+    heart.innerHTML=icons[Math.floor(Math.random()*icons.length)];
+
+    heart.style.left=Math.random()*100+"vw";
+
+    heart.style.fontSize=(Math.random()*22+12)+"px";
+
+    heart.style.animationDuration=(Math.random()*8+12)+"s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(()=>{
+
+        heart.remove();
+
+    },20000);
+
+}
+
+setInterval(createFloatingHeart,700);
