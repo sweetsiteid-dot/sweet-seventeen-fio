@@ -544,11 +544,11 @@ section{
 
 }
 
-.white{
+.yellow{
 
-    background:#ffffff;
+    background:#D4AF37;
 
-    border:2px solid #d8d8d8;
+    border:2px solid #E7C85A;
 
 }
 
@@ -1142,5 +1142,33 @@ footer p{
         opacity:0;
 
     }
+
+}
+
+/* ===== Dresscode Title ===== */
+
+#dresscode{
+
+    text-align:center;
+
+}
+
+#dresscode span,
+#dresscode h2,
+#dresscode p{
+
+    text-align:center;
+
+    margin-left:auto;
+
+    margin-right:auto;
+
+}
+
+#dresscode p{
+
+    max-width:650px;
+
+    margin:20px auto 40px;
 
 }
