@@ -14,7 +14,7 @@ openBtn.addEventListener("click", () => {
 
     music.play().catch(() => {});
 
-    createParticles();
+    createExplosion(openBtn);
 
     opening.classList.add("hide");
 
@@ -42,31 +42,67 @@ const icons = [
 
 ];
 
-function createParticles(){
+function createExplosion(button){
 
-    for(let i = 0; i < 80; i++){
+    const rect = button.getBoundingClientRect();
+
+    const icons = ["🤍","✨","⭐","♡"];
+
+    for(let i = 0; i < 70; i++){
 
         const item = document.createElement("span");
 
-        item.classList.add("fall-item");
-
         item.innerHTML = icons[Math.floor(Math.random()*icons.length)];
 
-        item.style.left = Math.random()*100 + "vw";
+        item.style.position = "fixed";
 
-        item.style.fontSize = (Math.random()*18 + 16) + "px";
+        item.style.left = (rect.left + rect.width/2) + "px";
 
-        item.style.animationDuration = (Math.random()*2 + 3) + "s";
+        item.style.top = (rect.top + rect.height/2) + "px";
 
-        item.style.opacity = Math.random();
+        item.style.fontSize = (Math.random()*14 + 18) + "px";
 
-        particles.appendChild(item);
+        item.style.pointerEvents = "none";
+
+        item.style.zIndex = "99999";
+
+        document.body.appendChild(item);
+
+        const x = (Math.random()-0.5)*500;
+
+        const y = (Math.random()-0.5)*500;
+
+        item.animate([
+
+            {
+
+                transform:"translate(0,0) scale(1)",
+
+                opacity:1
+
+            },
+
+            {
+
+                transform:`translate(${x}px, ${y}px) scale(.3)`,
+
+                opacity:0
+
+            }
+
+        ],{
+
+            duration:1500,
+
+            easing:"ease-out"
+
+        });
 
         setTimeout(()=>{
 
             item.remove();
 
-        },5000);
+        },1500);
 
     }
 
