@@ -70,12 +70,18 @@ button{
 
     text-align:center;
 
-    background:linear-gradient(
-    180deg,
-    #7d1d39 0%,
-    #63162d 45%,
-    #49101f 100%
-    );
+    background:
+        linear-gradient(
+            rgba(90,19,41,.65),
+            rgba(90,19,41,.65)
+        ),
+        url("images/3.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
 
     z-index:99999;
 
